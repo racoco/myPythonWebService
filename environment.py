@@ -3,6 +3,15 @@
 # The environment dictionary will contain CGI like variables and will be populated 
 # by the server at each request from the client. 
 # This script will output the whole dictionary.
+# To run this script save it as environment.py, open the terminal, 
+# navigate to the directory where it was saved and type python 
+# environment.py at the command line.
+
+# If in Windows it is necessary first to add the path to python.exe to the system 
+# environment variable Path. By the way if you can use Linux in instead of Windows 
+# then do it. It will save some pain.
+
+# Now go to the browser and type at the address bar:  http://localhost:8051/
 
 
 # Our tutorial's WSGI server
