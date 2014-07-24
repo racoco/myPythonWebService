@@ -38,7 +38,7 @@ def application(environ, start_response):
    
    status = '200 OK'
    response_headers = [('Content-Type', 'text/plain'),
-                  ('Content-Length', str(content_lenght))]
+                  ('Content-Length', str(content_length))]
                   
    start_response(status, response_headers)
 
