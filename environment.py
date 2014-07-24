@@ -46,7 +46,8 @@ def application(environ, start_response):
 
 # Instantiate the WSGI server.
 # It will receive the request, pass it to the application
-# and send the application's response to the client
+# and send the application's response to the client.
+# See: https://docs.python.org/2/library/wsgiref.html
 httpd = make_server(
    'localhost', # The host name.
    8051, # A port number where to wait for the request.
@@ -54,4 +55,8 @@ httpd = make_server(
    )
 
 # Wait for a single request, serve it and quit.
+# NOTE: handle_request handles 1 request and exits.
+#       To keep the server alive for many requests, 
+#       call httpd.serve_forever()
+# See: https://docs.python.org/2/library/wsgiref.html
 httpd.handle_request()
